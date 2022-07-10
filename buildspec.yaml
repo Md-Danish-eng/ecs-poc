@@ -37,13 +37,13 @@ phases:
        - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
   build:
     commands:
-       - docker build -t $REPOSITORY_URI:latest  .
-       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
+       - docker build -t 450403516352.dkr.ecr.us-east-1.amazonaws.com/danish-bluegreen-poc:latest  .
+       - docker tag 450403516352.dkr.ecr.us-east-1.amazonaws.com/danish-bluegreen-poc:latest 450403516352.dkr.ecr.us-east-1.amazonaws.com/danish-bluegreen-poc:modify
   post_build:
     commands:
-       - docker push $REPOSITORY_URI:latest
-       - docker push $REPOSITORY_URI:$IMAGE_TAG
-       - printf '[{"imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imageDetail.json
+       - docker push 450403516352.dkr.ecr.us-east-1.amazonaws.com/danish-bluegreen-poc:latest
+       - docker push 450403516352.dkr.ecr.us-east-1.amazonaws.com/danish-bluegreen-poc:modify
+       - printf '[{"imageUri":"%s"}]' 450403516352.dkr.ecr.us-east-1.amazonaws.com/danish-bluegreen-poc:modify > imageDetail.json
        - cat imageDetail.json
        #- sed -i 's/Tmt-prod-web:latest/Tmt-prod-web:$IMAGE_TAG/g' appspec.yaml
        #- sed -i 's/Tmt-prod-web:latest/Tmt-prod-web:$IMAGE_TAG/g' AppSpec.yaml
