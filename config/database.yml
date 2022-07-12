@@ -35,7 +35,7 @@ production:
   database: db1 
   username: admin123
   password: password123
-  host: database-1.ci7emuule9ps.us-east-1.rds.amazonaws.com
+  host: database-1.c1wqcuoetzhe.ap-southeast-2.rds.amazonaws.com
   port: 5432 
 
   #cucumber:
