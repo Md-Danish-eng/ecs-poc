@@ -1,6 +1,0 @@
-[
-    {
-        "name": "ecsrorpoc",
-        "imageUri": "450403516352.dkr.ecr.us-east-1.amazonaws.com/danish-bluegreen-poc:latest"
-    }
-]
