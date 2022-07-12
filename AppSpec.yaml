@@ -3,7 +3,7 @@ Resources:
  - TargetService:
      Type: AWS::ECS::Service
      Properties:
-       TaskDefinition: "arn:aws:ecs:us-east-1:450403516352:task-definition/ecs-ror-task:1"
+       TaskDefinition: "arn:aws:ecs:ap-southeast-2:430302018311:task-definition/bluegreen-task:2"
        LoadBalancerInfo:
-         ContainerName: "ecsrorpoc"
+         ContainerName: "bluegreen"
          ContainerPort: 80
