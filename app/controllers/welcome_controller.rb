@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def show
-    render text: "testtttiggg"
+    render text: "hello"
   end
 end
