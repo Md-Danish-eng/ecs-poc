@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def show
-    render text: "testing-poc"
+    render text: "Deployment succeed"
   end
 end
